@@ -66,15 +66,15 @@ GEM
     execjs (2.6.0)
     fission (0.5.0)
       CFPropertyList (~> 2.2)
-    fog (1.35.0)
-      fog-aliyun
+    fog (1.36.0)
+      fog-aliyun (>= 0.1.0)
       fog-atmos
       fog-aws (>= 0.6.0)
       fog-brightbox (~> 0.4)
       fog-core (~> 1.32)
       fog-dynect (~> 0.0.2)
       fog-ecloud (~> 0.1)
-      fog-google (>= 0.1.1)
+      fog-google (<= 0.1.0)
       fog-json
       fog-local
       fog-powerdns (>= 0.1.1)
@@ -91,7 +91,7 @@ GEM
       fog-xenserver
       fog-xml (~> 0.1.1)
       ipaddress (~> 0.5)
-      nokogiri
+      nokogiri (~> 1.5, >= 1.5.11)
     fog-aliyun (0.1.0)
       fog-core (~> 1.27)
       fog-json (~> 1.0)
@@ -120,7 +120,7 @@ GEM
     fog-ecloud (0.3.0)
       fog-core
       fog-xml
-    fog-google (0.2.0)
+    fog-google (0.1.0)
       fog-core
       fog-json
       fog-xml
@@ -282,7 +282,7 @@ DEPENDENCIES
   bootstrap-will_paginate (= 0.0.10)
   carrierwave (= 0.10.0)
   coffee-rails (~> 4.1.0)
-  fog (= 1.35.0)
+  fog (= 1.36.0)
   jbuilder (~> 2.0)
   jquery-rails
   mini_magick (= 3.8.0)
