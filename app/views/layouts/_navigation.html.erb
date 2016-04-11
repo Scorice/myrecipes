@@ -12,7 +12,7 @@
         <%= link_to "New Recipe", new_recipe_path, class: "btn btn-default btn-warning" %>
        </div>
        <ul class="nav_item">
-        <li class="drop-down">
+        <li class="dropdown">
          <%= link_to '#', class: "btn btn-default btn-danger dropdown-toggle", "data-toggle" => "dropdown" do %>
           <%= current_user.chefname %> <b class="caret"></b>
          <% end %>
@@ -24,10 +24,6 @@
          </ul>
         </li>
        </ul>
-      <% else %>
-       <div class="nav_item">
-        <%= link_to "Log in", login_path, class: "btn btn-default btn-success" %>
-       </div>
       <% end %>
     </div>
   </header>
