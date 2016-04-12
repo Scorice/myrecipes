@@ -20,5 +20,6 @@ Rails.application.routes.draw do
   
   resources :styles, only: [:new, :create, :show]
   resources :ingredients, only: [:new, :create, :show]
+  resources :reviews, only: [:new, :create, :destroy]
   
 end

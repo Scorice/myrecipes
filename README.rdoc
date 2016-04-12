@@ -46,3 +46,23 @@ Authentication updates:
 5) Like - update to current_user
 6) Before_action :require_user, except: [:show, :index]
 7) Before_action :requie_same_user for chefs, only: [:edit, :update]
+
+Adding comments to recipes:
+
+x1. Migration to create reviews table, body:text(20,500) - type = text_area, rating:integer(1-5) - type = radio_button,
+    title:string(5-30) - type = text_field, two foreign keys, reference chef_id, reference recipe_id
+x2. You'll need to build the Review model
+x3. You'll need to create tests for the spec, add validations to the review model.
+x4. Build the associations, has_many and belongs_to
+x5. Test out associations in rails console
+  -recipe.reviews
+  -chef.reviews
+6. Create routes
+  - new review = "reviews#new" (GET)
+  - create review = "reviews#create" (POST)
+  - destroy/delete = reviews#destroy (DELETE)
+7. Authenticated chefs can write reviews, before_action require_user
+8. You associate a chef_id and recipe_id
+9. Use existing code
+10. Pagination for reviews on show recipe page
+11. Include number of reviews on top
