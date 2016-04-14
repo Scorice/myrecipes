@@ -55,9 +55,7 @@ ActiveRecord::Schema.define(version: 20160412213243) do
   end
 
   create_table "reviews", force: :cascade do |t|
-    t.string   "title"
     t.text     "body"
-    t.integer  "rating"
     t.integer  "chef_id"
     t.integer  "recipe_id"
     t.datetime "created_at"

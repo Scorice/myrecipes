@@ -1,0 +1,17 @@
+<div class="well">
+ <%= link_to gravatar_for(review.chef, size: 60), chef_path(@recipe.chef), class: "pull-left" %>
+ <div class="review">
+  <h3><%= review.chef.chefname %></h3>
+  <p>
+  <%= simple_format(review.body) %>
+  </p>
+  <div>
+   <% if logged_in? and current_user == review.chef %>
+    <%= link_to "Update Review", edit_recipe_review_path(@recipe.id, review), class: "btn btn-default btn-info btn-small" %>
+   <% end %>
+   <% if logged_in? and (review.chef == current_user or current_user.admin?) %>
+    <%= link_to "Delete Review", recipe_review_path(@recipe.id, review), method: :delete, class: "btn btn-default btn-danger btn-small", data: { confirm: "Are you sure?" } %>
+   <% end %>
+  </div>
+ </div>
+</div>
