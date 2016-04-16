@@ -1,0 +1,7 @@
+<%= render 'shared/page_title', title: "Register your Account" %>
+
+<%= render 'form' %>
+
+<div class="center spacing-top">
+  Go to the <%= link_to "Login", register_path %> page if you have a login.
+</div>

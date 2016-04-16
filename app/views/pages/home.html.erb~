@@ -31,7 +31,7 @@
         </h3>
         <h2 class="left">Browse and view chef recipes as a guest and Sign up later</h2>
         <p>
-            <%= link_to "Browse Chef Recipe Listings", chefs_path, class: "btn btn-warning btn-small" %>
+            <%= link_to "Browse Chef Recipe Listings", "chefs_path", class: "btn btn-warning btn-small" %>
         </p>
     </div>
 </div>
